@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ID Page</title>
+</head>
+<body>
+  <h1>dowod:</h1>
+  <div id="output"></div>
+
+  <script>
+    // Get query parameters
+    const params = new URLSearchParams(window.location.search);
+
+    // Get DOM element to show the data
+    const output = document.getElementById("output");
+
+    // Loop through each parameter and show it
+    for (const [key, value] of params.entries()) {
+      const p = document.createElement("p");
+      p.textContent = `${key}: ${value}`;
+      output.appendChild(p);
+    }
+  </script>
+</body>
+</html>
 
