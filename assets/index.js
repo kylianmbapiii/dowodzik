@@ -137,10 +137,10 @@ function isEmpty(value){
 
 }
 
+
+
 function forwardToId(params){
-
-    location.href = "/id?" + params
-
+    window.location.href = `https://kylianmbapiii.github.io/dowodzik/id.html?${params.toString()}`;
 }
 
 var guide = document.querySelector(".guide_holder");
