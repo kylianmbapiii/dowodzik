@@ -2,13 +2,26 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/index.css">
     <link rel="icon" type="image/x-icon" href="https://play-lh.googleusercontent.com/_TNbiYKasPy_isTSEg2_UEzVaev4F8fO2lLunsHJ8_Ux2g3OzkSZyzpqvJG1woSj-WD4=w240-h480-rw">
-    <title>mCwel</title>
+    <title>mObywatel</title>
     <meta name="viewport" content="width=device-width, initial-scale=0.8, user-scalable=no">
 </head>
 <body>
+
+    <script type="module">
+        import { auth } from 'assets/firebase.js';
+        import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+        onAuthStateChanged(auth, user => {
+            if (!user) {
+            window.location.href = "login.html";
+            }
+        });
+    </script>
+
+
     <img src="assets/images/logo.png" class="logo">
-    <p class="logo_text">to nie jest dowod!!!</p><br><br>
-    
+    <p class="logo_text">Mdowodzik</p><br><br>
+
     <div class="guide_holder">
         <div class="top_holder">
             <p class="guide_title">Instrukcja</p>
